@@ -20,6 +20,8 @@ class SelectActivity : AppCompatActivity() {
         val recyclerView = findViewById<RecyclerView>(R.id.recyclerView)
         val textView = findViewById<TextView>(R.id.textView)
 
+        //change the title of the actionbar to be unique
+        getSupportActionBar()!!.setTitle("Destination Image Viewer App")
 
         // View.OnClickListener is created in the activity
         // and then passed to adapter
