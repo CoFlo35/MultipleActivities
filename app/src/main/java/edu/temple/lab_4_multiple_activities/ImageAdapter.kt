@@ -5,19 +5,12 @@ import android.view.ViewGroup
 import android.widget.ImageView
 import androidx.recyclerview.widget.RecyclerView
 
-/**
- * Adapter Constructor accepts onClickListener
- * to be used for views inside viewholder
- */
+
 class ImageAdapter (_items : ArrayList<ImageObject>, _ocl : View.OnClickListener) : RecyclerView.Adapter<ImageAdapter.ViewHolder>(){
 
     private val items = _items
     val ocl = _ocl
 
-    /**
-     * ViewHolder Constructor accepts onClickListener
-     * and assigns it to the included view
-     */
     class ViewHolder(_view: ImageView, ocl: View.OnClickListener) : RecyclerView.ViewHolder(_view) {
         val imageView = _view.apply { setOnClickListener(ocl) }
 
