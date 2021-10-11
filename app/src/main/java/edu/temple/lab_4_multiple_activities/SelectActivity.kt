@@ -23,7 +23,7 @@ class SelectActivity : AppCompatActivity() {
 
 
         //change the title of the actionbar to be unique
-        getSupportActionBar()!!.setTitle("Destination Image Viewer App")
+        getSupportActionBar()!!.setTitle("Dynamic Reponse Branch")
 
         // View.OnClickListener is created in the activity
         // and then passed to adapter
