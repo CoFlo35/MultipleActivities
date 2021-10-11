@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Lab_4_Multiple_Activities</string>
+    <string name="selction_prompt">Choisissez une destination</string>
+    <string name="destination_option_0">Australie</string>
+    <string name="destination_option_2">" Chine"</string>
+    <string name="destination_option_1">" Brésil"</string>
+    <string name="destination_option_3">Dubai</string>
+    <string name="destination_option_4">" Egypte"</string>
+    <string name="destination_option_5">La France</string>
+    <string name="destination_option_6">Inde</string>
+    <string name="destination_option_7">Italie</string>
+    <string name="destination_option_8">New York</string>
+    <string name="destination_option_9">Rome</string>
+    <string name="destination_option_10">" Russie"</string>
+    <string name="description_0">Bienvenue à l\'Opéra de Sydney, Sydney, Australie</string>
+    <string name="description_1">" Bienvenue au Christ Rédempteur, Rio de Janeiro, Brésil"</string>
+    <string name="description_2">Bienvenue au Leshan Giant Budda, Leshan, Chine</string>
+    <string name="description_3">" Bienvenue au Burj Khalifa, Dubaï, Émirats Arabes Unis"</string>
+    <string name="description_4">Bienvenue dans les Grandes Pyramides de Gyza, Gyza, Egypte</string>
+    <string name="description_5">Bienvenue à la Tour Eiffel, Paris, France</string>
+    <string name="description_6">Bienvenue au Taj Mahal, Agra, Inde</string>
+    <string name="description_7">Bienvenue à la tour penchée de Piza, Piazza del Duomo, Italie</string>
+    <string name="description_8">" Bienvenue à la Freedom Tower, New York, États-Unis"</string>
+    <string name="description_9">Bienvenue au Colisée, Rome, Italie</string>
+    <string name="description_10">" Bienvenue à la cathédrale de Vasily le Bienheureux, Moscou, Russie"</string>
+</resources>
