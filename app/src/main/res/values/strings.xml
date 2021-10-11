@@ -1,3 +1,32 @@
 <resources>
     <string name="app_name">Lab_4_Multiple_Activities</string>
+    <string name="selction_prompt">Select a Destination</string>
+
+    <string-array name = "Destination_Names">
+        <item>Australia</item>
+        <item>Brazil</item>
+        <item>China</item>
+        <item>Dubai</item>
+        <item>Egypt</item>
+        <item>France</item>
+        <item>India</item>
+        <item>Italy</item>
+        <item>New York</item>
+        <item>Rome</item>
+        <item>Russia</item>
+    </string-array>
+
+    <string-array name = "Destination_Description">
+        <item>Welcome to the Sydney Opera House, Sydney, Australia</item>
+        <item>Welcome to Christ the Redeemer, Rio de JaneiroBrazil</item>
+        <item>Welcome to the Leshan Giant Budda, Leshan, China</item>
+        <item>Welcome to the Burj Khalifa, Dubai, UAE</item>
+        <item>Welcome to the Great Pyramids of Gyza, Gyza, Egypt</item>
+        <item>Welcome to the Eiffel Tower, Paris, France</item>
+        <item>Welcome to the Taj Mahal, Agra, India</item>
+        <item>Welcome to the Leaning Tower of Piza, Piazza del Duomo, Italy</item>
+        <item>Welcome to the Freedom Tower, New York, USA</item>
+        <item>Welcome to the Collosseum, Rome, Italy</item>
+        <item>Welcome to the Cathedral of Vasily the Blessed, Moscow, Russia</item>
+    </string-array>
 </resources>
