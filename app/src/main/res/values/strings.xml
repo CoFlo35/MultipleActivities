@@ -1,31 +1,31 @@
 <resources>
     <string name="app_name" translatable="false">Lab_4_Multiple_Activities</string>
     <string name="selction_prompt">Select a Destination</string>
-    <string name ="destination_option_0">Australia</string>
-    <string name ="destination_option_1">Brazil</string>
-    <string name ="destination_option_2">China</string>
-    <string name ="destination_option_3">Dubai</string>
-    <string name ="destination_option_4">Eygpt</string>
-    <string name ="destination_option_5">France</string>
-    <string name ="destination_option_6">India</string>
-    <string name ="destination_option_7">Italy</string>
-    <string name ="destination_option_8">New York</string>
-    <string name ="destination_option_9">Rome</string>
-    <string name ="destination_option_10">Russia</string>
+    <string name="destination_option_0">Australia</string>
+    <string name="destination_option_1">Brazil</string>
+    <string name="destination_option_2">China</string>
+    <string name="destination_option_3">Dubai</string>
+    <string name="destination_option_4">Eygpt</string>
+    <string name="destination_option_5">France</string>
+    <string name="destination_option_6">India</string>
+    <string name="destination_option_7">Italy</string>
+    <string name="destination_option_8">New York</string>
+    <string name="destination_option_9">Rome</string>
+    <string name="destination_option_10">Russia</string>
 
-    <string name ="description_0">Welcome to the Sydney Opera House, Sydney, Australia</string>
-    <string name ="description_1">Welcome to Christ the Redeemer, Rio de JaneiroBrazil</string>
-    <string name ="description_2">Welcome to the Leshan Giant Budda, Leshan, China</string>
-    <string name ="description_3">Welcome to the Burj Khalifa, Dubai, UAE</string>
-    <string name ="description_4">Welcome to the Great Pyramids of Gyza, Gyza, Egypt</string>
-    <string name ="description_5">Welcome to the Eiffel Tower, Paris, France</string>
-    <string name ="description_6">Welcome to the Taj Mahal, Agra, India</string>
-    <string name ="description_7">Welcome to the Leaning Tower of Piza, Piazza del Duomo, Italy</string>
-    <string name ="description_8">Welcome to the Freedom Tower, New York, USA</string>
-    <string name ="description_9">Welcome to the Collosseum, Rome, Italy</string>
-    <string name ="description_10">Welcome to the Cathedral of Vasily the Blessed, Moscow, Russia</string>
+    <string name="description_0">Welcome to the Sydney Opera House, Sydney, Australia</string>
+    <string name="description_1">Welcome to Christ the Redeemer, Rio de JaneiroBrazil</string>
+    <string name="description_2">Welcome to the Leshan Giant Budda, Leshan, China</string>
+    <string name="description_3">Welcome to the Burj Khalifa, Dubai, UAE</string>
+    <string name="description_4">Welcome to the Great Pyramids of Gyza, Gyza, Egypt</string>
+    <string name="description_5">Welcome to the Eiffel Tower, Paris, France</string>
+    <string name="description_6">Welcome to the Taj Mahal, Agra, India</string>
+    <string name="description_7">Welcome to the Leaning Tower of Piza, Piazza del Duomo, Italy</string>
+    <string name="description_8">Welcome to the Freedom Tower, New York, USA</string>
+    <string name="description_9">Welcome to the Collosseum, Rome, Italy</string>
+    <string name="description_10">Welcome to the Cathedral of Vasily the Blessed, Moscow, Russia</string>
 
-    <string-array name = "Destination_Names">
+    <string-array name="Destination_Names">
         <item>@string/destination_option_0</item>
         <item>@string/destination_option_1</item>
         <item>@string/destination_option_2</item>
@@ -39,7 +39,7 @@
         <item>@string/destination_option_10</item>
     </string-array>
 
-    <string-array name = "Destination_Description">
+    <string-array name="Destination_Description">
         <item>@string/description_0</item>
         <item>@string/description_1</item>
         <item>@string/description_2</item>
@@ -52,4 +52,6 @@
         <item>@string/description_9</item>
         <item>@string/description_10</item>
     </string-array>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>

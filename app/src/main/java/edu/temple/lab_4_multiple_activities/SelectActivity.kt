@@ -12,9 +12,19 @@ import edu.temple.Lab_4_Multiple_Activites.ImageAdapter
 import edu.temple.Lab_4_Multiple_Activites.ImageObject
 
 class SelectActivity : AppCompatActivity() {
+    lateinit var fragment : DisplayFragment
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+
+        fragment = DisplayFragment()
+
+        supportFragmentManager.beginTransaction()
+            .add(R.id.container1, fragment)
+            .commit()
+
+
 
         //initialize the list of objects
         val items = setDataInList()
@@ -29,6 +39,8 @@ class SelectActivity : AppCompatActivity() {
         // and then passed to adapter
         // This allows the onClick() callback
         // to have access to the activity's members
+
+
         val onClickListener = View.OnClickListener {
             val itemPosition = recyclerView.getChildAdapterPosition(it)
 
@@ -59,6 +71,8 @@ class SelectActivity : AppCompatActivity() {
             recyclerView.addItemDecoration(itemDecoration)
 
         }
+
+
 
     }
 
