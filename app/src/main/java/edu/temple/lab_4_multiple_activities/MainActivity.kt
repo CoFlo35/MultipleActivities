@@ -11,54 +11,24 @@ import androidx.recyclerview.widget.RecyclerView
 import edu.temple.Lab_4_Multiple_Activites.ImageAdapter
 import edu.temple.Lab_4_Multiple_Activites.ImageObject
 
-class SelectActivity : AppCompatActivity() {
+class MainActivity : AppCompatActivity() {
+    lateinit var _displayFragment:SelectedFragment
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        //initialize the list of objects
-        val items = setDataInList()
+        _displayFragment = SelectedFragment()
 
-        val recyclerView = findViewById<RecyclerView>(R.id.recyclerView)
+        supportFragmentManager.beginTransaction()
+            .add(R.id.container1, _displayFragment)
+            .commit()
 
 
         //change the title of the actionbar to be unique
         getSupportActionBar()!!.setTitle("Destination Image Viewer App")
 
-        // View.OnClickListener is created in the activity
-        // and then passed to adapter
-        // This allows the onClick() callback
-        // to have access to the activity's members
-        val onClickListener = View.OnClickListener {
-            val itemPosition = recyclerView.getChildAdapterPosition(it)
 
-            //pull off all values to be sent to the response activity
-            val name = items.get(itemPosition).name
-            val image = items.get(itemPosition).resourceId
-            val description = items.get(itemPosition).description
-            //create the intent of the second activity to be triggered
-            val intent = Intent(this, DisplayActivity::class.java)
-
-            //add all values of chosen image to the intent
-            intent.putExtra("Name", name)
-            intent.putExtra("Image", image)
-            intent.putExtra("Description",description)
-            //start the response activity
-            startActivity(intent)
-
-
-        }
-
-        //apply the adapter and layout manager to the recyclerView
-        //Add in item Decoration to make a divider that seperates the photos in the grid verically(Horizontal line)
-        recyclerView.apply {
-            recyclerView.adapter = ImageAdapter(items, onClickListener)
-            recyclerView.layoutManager = GridLayoutManager(this.context, 3)
-            var itemDecoration = DividerItemDecoration(this.context, DividerItemDecoration.VERTICAL)
-            itemDecoration.setDrawable(getDrawable(R.drawable.divider)!!)
-            recyclerView.addItemDecoration(itemDecoration)
-
-        }
 
     }
 
