@@ -12,7 +12,7 @@ import edu.temple.Lab_4_Multiple_Activites.ImageAdapter
 import edu.temple.Lab_4_Multiple_Activites.ImageObject
 
 class MainActivity : AppCompatActivity() {
-    lateinit var _displayFragment:SelectedFragment
+    lateinit var _displayFragment: SelectedFragment
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -53,3 +53,7 @@ class MainActivity : AppCompatActivity() {
     }
 
 }
+
+
+
+

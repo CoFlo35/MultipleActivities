@@ -5,6 +5,7 @@
     android:id="@+id/constraint"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+
     tools:context="edu.temple.lab_4_multiple_activities.MainActivity">
 
     <TextView
@@ -22,7 +23,7 @@
 
     <androidx.fragment.app.FragmentContainerView
         android:id="@+id/container1"
-        android:name="edu.temple.lab_4_multiple_activities.SelectedFragment"
+        android:name = "edu.temple.lab_4_multiple_activities.SelectedFragment"
         android:layout_width="match_parent"
         android:layout_height="300dp"
         android:background="@color/black"
