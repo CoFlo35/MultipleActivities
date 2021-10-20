@@ -4,13 +4,13 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
-    android:background="@color/purple_500"
+
     tools:context=".DisplayFragment">
 
 
     <TextView
         android:id="@+id/display_textViewName"
-        android:layout_width="225dp"
+        android:layout_width="400dp"
         android:layout_height="70dp"
         android:layout_marginStart="114dp"
 
@@ -26,8 +26,9 @@
 
     <ImageView
         android:id="@+id/displayImageView"
-        android:layout_width="350dp"
-        android:layout_height="350dp"
+        android:layout_width="300dp"
+        android:layout_height="325dp"
+        android:layout_marginBottom="25dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.491"
         app:layout_constraintStart_toStartOf="parent"

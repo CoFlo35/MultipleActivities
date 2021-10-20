@@ -1,43 +1,58 @@
 package edu.temple.lab_4_multiple_activities
 
 import android.content.Intent
+import android.graphics.drawable.Drawable
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import android.widget.TextView
+import android.widget.Toast
+import androidx.fragment.app.Fragment
+import androidx.lifecycle.Observer
 import androidx.recyclerview.widget.DividerItemDecoration
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import edu.temple.Lab_4_Multiple_Activites.ImageAdapter
 import edu.temple.Lab_4_Multiple_Activites.ImageObject
 
-class SelectActivity : AppCompatActivity() {
+class MainActivity : AppCompatActivity() {
     lateinit var fragment1 : DisplayFragment
     lateinit var fragment2 : SelectionFragment
+    var viewModel: SharedViewModel = SharedViewModel()
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
+
+
+        viewModel = SharedViewModel()
+        //viewModel.getImage().observe(this, )
+
+        val context = this
+
         //initialize the list of objects
         val items = setDataInList()
 
+        val drawable : Int
+        drawable = R.drawable.divider
+
         fragment1 = DisplayFragment()
-        fragment2 = SelectionFragment(items)
+        fragment2 = SelectionFragment.newInstance(items)
 
         supportFragmentManager.beginTransaction()
            .add(R.id.container2, fragment1)
            .add(R.id.container1, fragment2)
             .commit()
 
-
-
-
-        // val recyclerView = findViewById<RecyclerView>(R.id.recyclerView)
-
-
-        //change the title of the actionbar to be unique
         getSupportActionBar()!!.setTitle("Destination Image Viewer App")
+
+//        viewModel.getImage().observe(this, Observer {
+//            DisplayFragment.updateDisplay()
+//        })
+
+
 
         // View.OnClickListener is created in the activity
         // and then passed to adapter
@@ -78,7 +93,7 @@ class SelectActivity : AppCompatActivity() {
 
         }
         */
-
+        fun doSomething(){}
 
 
     }

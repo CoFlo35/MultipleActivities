@@ -12,7 +12,9 @@ class ImageAdapter (_items : ArrayList<ImageObject>, _ocl : View.OnClickListener
     val ocl = _ocl
 
     class ViewHolder(_view: ImageView, ocl: View.OnClickListener) : RecyclerView.ViewHolder(_view) {
+
         val imageView = _view.apply { setOnClickListener(ocl) }
+
 
     }
 

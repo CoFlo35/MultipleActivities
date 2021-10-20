@@ -1,22 +1,28 @@
 package edu.temple.lab_4_multiple_activities
 
+import android.content.Context
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
+import android.view.MenuItem
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
+import android.widget.Toast
+import androidx.lifecycle.ViewModelProvider
 
 
-     lateinit var layout:View
+lateinit var layout:View
     lateinit var textView: TextView
     lateinit var imageView: ImageView
+    private  var viewModel: SharedViewModel = SharedViewModel()
+    var name : String? = null
+    var image : Int = R.drawable.app_icon.toInt()
 
-class DisplayFragment : Fragment() {
+class DisplayFragment() : Fragment() {
 
-    var name : String = "Australia"
-    var image : Int = R.drawable.australia.toInt()
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -31,12 +37,17 @@ class DisplayFragment : Fragment() {
 
         textView = layout.findViewById(R.id.display_textViewName)
         imageView = layout.findViewById(R.id.displayImageView)
+        viewModel = ViewModelProvider(this).get(SharedViewModel::class.java)
 
+        name = "Select a Location"
         textView.text = name
         imageView.setImageResource(image)
 
+
         return layout
     }
+
+
 
 
     companion object {
@@ -49,15 +60,20 @@ class DisplayFragment : Fragment() {
          * @return A new instance of fragment DisplayFragment.
          */
         // TODO: Rename and change types and number of parameters
-        @JvmStatic
-        fun newInstance(param1: String, param2: Int) =
-            DisplayFragment().apply {
-                arguments = Bundle().apply {
-                    putString("name", param1)
-                    putInt("image", param2)
-                }
-            }
+       // @JvmStatic
+
+        fun updateDisplay(_name:String, _image:Int){
+            textView.text = _name
+            imageView.setImageResource(_image)
+
+        }
+
+
     }
+
+
+
+
 
 
 }
