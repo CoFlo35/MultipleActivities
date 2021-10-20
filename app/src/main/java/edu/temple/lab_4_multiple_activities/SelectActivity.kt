@@ -12,24 +12,28 @@ import edu.temple.Lab_4_Multiple_Activites.ImageAdapter
 import edu.temple.Lab_4_Multiple_Activites.ImageObject
 
 class SelectActivity : AppCompatActivity() {
-    lateinit var fragment : DisplayFragment
+    lateinit var fragment1 : DisplayFragment
+    lateinit var fragment2 : SelectionFragment
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        fragment = DisplayFragment()
+        //initialize the list of objects
+        val items = setDataInList()
+
+        fragment1 = DisplayFragment()
+        fragment2 = SelectionFragment(items)
 
         supportFragmentManager.beginTransaction()
-            .add(R.id.container1, fragment)
+           .add(R.id.container2, fragment1)
+           .add(R.id.container1, fragment2)
             .commit()
 
 
 
-        //initialize the list of objects
-        val items = setDataInList()
 
-        val recyclerView = findViewById<RecyclerView>(R.id.recyclerView)
+        // val recyclerView = findViewById<RecyclerView>(R.id.recyclerView)
 
 
         //change the title of the actionbar to be unique
@@ -40,6 +44,7 @@ class SelectActivity : AppCompatActivity() {
         // This allows the onClick() callback
         // to have access to the activity's members
 
+/*
 
         val onClickListener = View.OnClickListener {
             val itemPosition = recyclerView.getChildAdapterPosition(it)
@@ -61,6 +66,7 @@ class SelectActivity : AppCompatActivity() {
 
         }
 
+
         //apply the adapter and layout manager to the recyclerView
         //Add in item Decoration to make a divider that seperates the photos in the grid verically(Horizontal line)
         recyclerView.apply {
@@ -71,6 +77,7 @@ class SelectActivity : AppCompatActivity() {
             recyclerView.addItemDecoration(itemDecoration)
 
         }
+        */
 
 
 
@@ -95,5 +102,7 @@ class SelectActivity : AppCompatActivity() {
         items.add(ImageObject(R.drawable.russia,destinationDescription[10], destinationName[10]))
         return items
     }
+
+
 
 }
